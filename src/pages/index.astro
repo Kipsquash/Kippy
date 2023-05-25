@@ -17,14 +17,40 @@ import Card from '../components/Card.astro';
 		width: 100px;
 		height: 100px;
 		background-color: red;
+		position: relative;
+		transform: rotate(-45deg);
+		box-shadow: -10px 10px 90px red;
+		animation: heart 0.75s linear infinite;
+	}
+	@keyframes heart{
+		0%{
+		transform: rotate(-45deg) scale(1.07)
+		}
+		80%{
+		transform: rotate(-45deg) scale(1.0)
+		}
+		100%{
+		transform: rotate(-45deg) scale(0.8)
+		}
 	}
 	#heart:before{
-		rotate: (45deg);
+		top: -50px;
+		content: '';
+		width: 100px;
+		height: 100px;
+		background-color: red;
+		position: absolute;
 		border-radius: 50px;
+
 	}
 	
 	#heart:after{
-		rotate: (45deg);
+		right: -50px;
+		content: '';
+		width: 100px;
+		height: 100px;
+		background-color: red;
+		position: absolute;
 		border-radius: 50px;
 	}
 	main {
