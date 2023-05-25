@@ -6,10 +6,27 @@ import Card from '../components/Card.astro';
 <Layout title="Welcome to Astro.">
 	<main>
 		<h1 class="text-gradient">My Astro Project!</span></h1>
+		<br>
+		<br>
+		<div id="heart"></div>
 	</main>
 </Layout>
 
 <style>
+	#heart{
+		width: 100px;
+		height: 100px;
+		background-color: red;
+	}
+	#heart:before{
+		rotate: (45deg);
+		border-radius: 50px;
+	}
+	
+	#heart:after{
+		rotate: (45deg);
+		border-radius: 50px;
+	}
 	main {
 		margin: auto;
 		padding: 1.5rem;
@@ -53,3 +70,6 @@ import Card from '../components/Card.astro';
 		padding: 0;
 	}
 </style>
+<script>
+
+</script>
